@@ -26,29 +26,9 @@ $title->name = "FrontPHP v1.0";
 $head = new Head;
 $head->code = "{$style->style()}{$title->title()}";
 
-//label and input
-$usrlabel = new Label;
-$usrinput = new Input;
-$usrinput->type = "text";
-$usrinput->name = "usr";
-$usrlabel->For = $usrinput->name;
-$usrlabel->text = "Username : ";
-
-$usrlabel1 = new Label;
-$usrinput1 = new Input;
-$usrinput1->type = "radio";
-$usrinput1->name = "gen";
-$usrlabel1->For = $usrinput->name;
-$usrlabel1->text = "male : ";
-
-$b = "{$usrlabel1->label()}{$usrinput1->input()}";
-//form
-$form = new Form;
-$form->code = "{$usrlabel->label()}{$usrinput->input()}"."<br>"."{$b}";
-
 //<body> class
 $body = new Body;
-$body->code = $form->form();
+$body->code = $img->img();
 
 //Running Our Webpage
 $html = new Html;
